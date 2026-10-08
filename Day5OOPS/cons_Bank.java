@@ -26,6 +26,18 @@ class bank {
         System.out.println("Deposited Amount: " + amount);
         System.out.println("New Balance: " + balance);
     }
+    void withdraw(int amount) {
+        if (amount > balance) {
+            System.out.println("Insufficient Balance");
+        } else {
+            int or_balance = balance;
+            balance -= amount;
+
+            System.out.println("Original Balance: " + or_balance);
+            System.out.println("Withdrawn Amount: " + amount);
+            System.out.println("New Balance: " + balance);
+        }
+    }
 }
 
 public class cons_Bank {
@@ -35,5 +47,6 @@ public class cons_Bank {
 
         b1.displayInfo();
         b1.deposit(500);
+        b1.withdraw(2000);
     }
 }
